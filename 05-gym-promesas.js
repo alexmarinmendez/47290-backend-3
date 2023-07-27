@@ -7,13 +7,12 @@ pA
     .then()
     .then()
     .then(function(value) {
-        console.log(value)
-        throw new Error('Error nuevo 1')
+        console.log('1.- ', value)
     })
     .then(function(value) {
-        console.log(value)
-        throw new Error('Error nuevo 2')
+        console.log('2.- ', value)
+        return { nombre: 'Alex' }
     })
-    .then(null, function(err) {
-        console.log(err)
+    .then(function(value) {
+        console.log('3.- ', value)
     })
